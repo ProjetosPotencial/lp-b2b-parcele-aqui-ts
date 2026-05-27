@@ -1,25 +1,48 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import FloatingCTA from "@/components/FloatingCTA";
+import Footer from "@/components/Footer";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home Page - Parcele Aqui B2B Landing Page
+ * Design: Premium B2B Landing Page with TypeScript
+ * - Header with navigation and mobile menu
+ * - Hero section with 3-slide carousel
+ * - Floating WhatsApp CTA
+ * - Footer with company information
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-white">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        {/* Placeholder sections - to be implemented */}
+        <section id="como-funciona" className="py-20 bg-brand-beige-light">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-brand-brown mb-8">Como Funciona</h2>
+            <p className="text-brand-text-secondary">Esta seção será implementada em breve.</p>
+          </div>
+        </section>
+        
+        <section id="quem-somos" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-brand-brown mb-8">Sobre Nós</h2>
+            <p className="text-brand-text-secondary">Esta seção será implementada em breve.</p>
+          </div>
+        </section>
+
+        <section id="faq" className="py-20 bg-brand-beige-light">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-brand-brown mb-8">Perguntas Frequentes</h2>
+            <p className="text-brand-text-secondary">Esta seção será implementada em breve.</p>
+          </div>
+        </section>
       </main>
+      
+      <Footer />
+      <FloatingCTA />
     </div>
   );
 }
