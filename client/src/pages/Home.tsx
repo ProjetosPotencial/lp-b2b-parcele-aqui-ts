@@ -1,15 +1,24 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Infrastructure from "@/components/Infrastructure";
+import Bottleneck from "@/components/Bottleneck";
+import Solution from "@/components/Solution";
+import HowItWorks from "@/components/HowItWorks";
+import Impact from "@/components/Impact";
+import Companies from "@/components/Companies";
+import Models from "@/components/Models";
+import AboutUs from "@/components/AboutUs";
+import Security from "@/components/Security";
+import FinalCTA from "@/components/FinalCTA";
 import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
 
 /**
  * Home Page - Parcele Aqui B2B Landing Page
  * Design: Premium B2B Landing Page with TypeScript
- * - Header with navigation and mobile menu
- * - Hero section with 3-slide carousel
- * - Floating WhatsApp CTA
- * - Footer with company information
+ * - Complete landing page with all sections
+ * - Responsive design
+ * - Smooth scrolling navigation
  */
 
 export default function Home() {
@@ -18,27 +27,16 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* Placeholder sections - to be implemented */}
-        <section id="como-funciona" className="py-20 bg-brand-beige-light">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-brand-brown mb-8">Como Funciona</h2>
-            <p className="text-brand-text-secondary">Esta seção será implementada em breve.</p>
-          </div>
-        </section>
-        
-        <section id="quem-somos" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-brand-brown mb-8">Sobre Nós</h2>
-            <p className="text-brand-text-secondary">Esta seção será implementada em breve.</p>
-          </div>
-        </section>
-
-        <section id="faq" className="py-20 bg-brand-beige-light">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-brand-brown mb-8">Perguntas Frequentes</h2>
-            <p className="text-brand-text-secondary">Esta seção será implementada em breve.</p>
-          </div>
-        </section>
+        <Infrastructure />
+        <Bottleneck />
+        <Solution />
+        <HowItWorks />
+        <Impact />
+        <Companies />
+        <Models />
+        <AboutUs />
+        <Security />
+        <FinalCTA />
       </main>
       
       <Footer />
