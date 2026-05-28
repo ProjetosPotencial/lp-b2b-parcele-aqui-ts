@@ -84,12 +84,12 @@ export default function Hero() {
             <div className="absolute inset-0 bg-brand-yellow rounded-full opacity-20 blur-2xl" />
             
             {/* Circular image container */}
-            <div className="relative w-full aspect-square max-w-md">
-              <div className="absolute inset-0 bg-brand-yellow rounded-full" style={{ transform: 'translateY(40px)' }} />
+            <div className="relative w-full aspect-square max-w-lg float-animation">
+              <div className="absolute inset-0 bg-brand-yellow rounded-full" style={{ transform: 'translate(16px, 16px)' }} />
               <img
                 src="/images/sections/hero-slide-1.webp"
                 alt="Profissional sorridente com tablet"
-                className="relative w-full h-full object-cover rounded-full shadow-2xl"
+                className="relative w-full h-full object-cover rounded-full shadow-2xl image-hover"
               />
             </div>
           </div>

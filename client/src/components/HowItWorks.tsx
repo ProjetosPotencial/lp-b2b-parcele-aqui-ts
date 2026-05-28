@@ -54,18 +54,21 @@ export default function HowItWorks() {
             </div>
 
             {/* Steps Card */}
-            <div className="absolute bottom-0 left-8 right-8 bg-brand-beige-light rounded-2xl p-8 grid grid-cols-4 gap-4">
+            <div className="absolute bottom-0 left-8 right-8 grid grid-cols-4 gap-6">
               {steps.map((step, index) => (
-                <div key={index} className="flex flex-col gap-3">
+                <div 
+                  key={index} 
+                  className="flex flex-col gap-3 bg-white rounded-2xl p-6 card-hover"
+                  style={{
+                    boxShadow: '0 10px 35px rgba(0, 0, 0, 0.08)'
+                  }}
+                >
                   <p className="font-kufam font-bold text-2xl text-brand-brown">
                     {step.number}
                   </p>
                   <p className="text-sm text-brand-brown">
                     {step.title}
                   </p>
-                  {index < steps.length - 1 && (
-                    <div className="absolute right-0 top-0 bottom-0 w-0.5 bg-brand-yellow-dark" />
-                  )}
                 </div>
               ))}
             </div>
@@ -80,18 +83,21 @@ export default function HowItWorks() {
             className="w-full h-auto rounded-lg mb-8"
           />
 
-          <div className="bg-brand-beige-light rounded-2xl p-8 space-y-8">
+          <div className="space-y-4">
             {steps.map((step, index) => (
-              <div key={index} className="text-center">
+              <div 
+                key={index} 
+                className="text-center bg-white rounded-2xl p-6 card-hover"
+                style={{
+                  boxShadow: '0 10px 35px rgba(0, 0, 0, 0.08)'
+                }}
+              >
                 <p className="font-kufam font-bold text-3xl text-brand-brown mb-2">
                   {step.number}
                 </p>
                 <p className="text-sm text-brand-brown">
                   {step.title}
                 </p>
-                {index < steps.length - 1 && (
-                  <div className="w-16 h-0.5 bg-brand-yellow mx-auto mt-6" />
-                )}
               </div>
             ))}
           </div>

@@ -59,12 +59,20 @@ export default function Impact() {
         {/* Impact Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {impacts.map((impact, index) => (
-            <div key={index} className="flex flex-col gap-4">
-              <img
-                src={impact.icon}
-                alt={impact.title}
-                className="w-12 h-12"
-              />
+            <div 
+              key={index} 
+              className="flex flex-col gap-4 card-hover"
+              style={{
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div className="icon-circle w-16 h-16">
+                <img
+                  src={impact.icon}
+                  alt={impact.title}
+                  className="w-8 h-8"
+                />
+              </div>
               <h3 className="font-kufam font-bold text-lg text-brand-brown">
                 {impact.title}
               </h3>
@@ -81,7 +89,7 @@ export default function Impact() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary btn-yellow-hover inline-flex"
+            className="btn-primary bg-brand-yellow hover:bg-brand-yellow-dark text-brand-brown font-bold px-6 py-3 rounded-lg transition-colors inline-flex"
           >
             Ver exemplos de uso
           </a>

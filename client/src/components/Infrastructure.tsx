@@ -3,7 +3,8 @@
  * Design: Parcele Aqui B2B
  * - 4 cards com borda amarela
  * - Background com blur amarelo
- * - Ícones destacados
+ * - Ícones em círculo amarelo
+ * - Hover effects
  */
 
 const features = [
@@ -57,13 +58,19 @@ export default function Infrastructure() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="border-2 border-brand-yellow rounded-2xl p-6 bg-white hover:shadow-lg transition-shadow"
+              className="border-2 border-brand-yellow rounded-2xl p-6 card-hover"
+              style={{
+                backgroundColor: 'rgba(255, 193, 7, 0.05)',
+                boxShadow: '0 0 25px rgba(255, 193, 7, 0.1)'
+              }}
             >
-              <img
-                src={feature.icon}
-                alt={feature.title}
-                className="w-16 h-16 mb-4"
-              />
+              <div className="icon-circle mb-4">
+                <img
+                  src={feature.icon}
+                  alt={feature.title}
+                  className="w-8 h-8"
+                />
+              </div>
               <h3 className="font-kufam font-bold text-lg text-brand-brown mb-3">
                 {feature.title}
               </h3>
