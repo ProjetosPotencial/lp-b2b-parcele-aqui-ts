@@ -62,19 +62,22 @@ export default function Solution() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary btn-yellow-hover w-fit"
+              className="btn-primary bg-brand-yellow hover:bg-brand-yellow-dark text-brand-brown font-bold px-6 py-3 rounded-lg transition-colors w-fit"
             >
               Simular uma operação
             </a>
           </div>
 
-          {/* Right: Image */}
-          <div>
-            <img
-              src="/images/sections/secao-solucao.png"
-              alt="Profissional confiante em ambiente B2B"
-              className="w-full h-auto rounded-lg"
-            />
+          {/* Right: Image with yellow border */}
+          <div className="flex items-center justify-center">
+            <div className="relative w-full max-w-md">
+              <div className="absolute inset-0 border-8 border-brand-yellow rounded-lg" style={{ transform: 'translate(12px, 12px)' }} />
+              <img
+                src="/images/sections/secao-solucao.png"
+                alt="Profissional confiante em ambiente B2B"
+                className="relative w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
